@@ -1,0 +1,206 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mobile Games</title>
+    <style>
+        body {
+            background-color: #000;
+            color: white;
+            text-align: center;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        h1 {
+            color: #d4ff3e;
+            display: inline-block;
+        }
+        p {
+            color: #ccc;
+        }
+        .thumbnail {
+            width: 70px;/* زيادة حجم الصور */
+            height: auto;
+            margin-right: 10px;
+            vertical-align: middle;
+        }
+        .btn-container {
+            margin-top: 20px;
+        }
+        .btn {
+            display: inline-block;
+            padding: 15px 25px;
+            margin: 10px;
+            color: white;
+            font-size: 18px;
+            font-weight: bold;
+            border-radius: 8px;
+            text-decoration: none;
+            position: relative;
+            overflow: hidden;
+            text-shadow: 0 0 5px rgba(255, 255, 255, 0.6);
+        }
+        .btn::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(120deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+            transition: all 0.5s ease;
+        }
+        .btn:hover::before {
+            left: 100%;
+        }
+        .btn img {
+            vertical-align: middle;
+            margin-right: 10px;
+            width: 24px;
+            height: 24px;
+            opacity: 0.8;
+        }
+        .btn-apk {
+            background: linear-gradient(135deg, #a4c639, #6bbf59);
+            box-shadow: 0 0 10px #6bbf59, 0 0 20px #6bbf59;
+        }
+        .btn-ios {
+            background: linear-gradient(135deg, #6bbf59, #3399ff);
+            box-shadow: 0 0 10px #3399ff, 0 0 20px #3399ff;
+        }
+        .btn-install {
+            background: linear-gradient(135deg, #ff3333, #cc0000);
+            box-shadow: 0 0 10px #ff3333, 0 0 20px #ff3333;
+        }
+        .btn:hover {
+            opacity: 0.9;
+        }
+        .image-gallery {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin: 30px 0;
+        }
+        .image-gallery img {
+            width: 90%;/* زيادة حجم الصور */
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(255, 255, 255, 0.2);
+            cursor: pointer;
+            transition: transform 0.2s ease;
+        }
+        .image-gallery img:hover {
+            transform: scale(1.05);
+        }
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.8);
+            justify-content: center;
+            align-items: center;
+        }
+        .modal img {
+            max-width: 90%;
+            max-height: 90%;
+            border-radius: 8px;
+        }
+        .modal .close {
+            position: absolute;
+            top: 10px;
+            right: 20px;
+            color: white;
+            font-size: 28px;
+            font-weight: bold;
+            text-decoration: none;
+            background: rgba(0, 0, 0, 0.5);
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            text-align: center;
+            line-height: 40px;
+            transition: background 0.3s ease;
+        }
+        .modal .close:hover {
+            background: rgba(255, 255, 255, 0.3);
+        }
+        .modal:target {
+            display: flex;
+        }
+        .article-container {
+            margin: 30px auto;
+            padding: 20px;
+            max-width: 800px;
+            background-color: #111;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1);
+            color: #ccc;
+            text-align: left;
+        }
+        .article-container h2 {
+            color: #d4ff3e;
+        }
+    </style>
+<link rel="me" href="https://www.blogger.com/profile/01346904356366767412" />
+<meta name='google-adsense-platform-account' content='ca-host-pub-1556223355139109'/>
+<meta name='google-adsense-platform-domain' content='blogspot.com'/>
+<link rel="me" href="https://www.blogger.com/profile/01346904356366767412" />
+<meta name='google-adsense-platform-account' content='ca-host-pub-1556223355139109'/>
+<meta name='google-adsense-platform-domain' content='blogspot.com'/>
+</head>
+<body>
+    <!-- الصورة المصغرة -->
+    <img src="https://i.ibb.co/ZckK2Yd/62c97cef3436d.png" alt="Game Thumbnail" class="thumbnail">
+    
+    <h1>The Spike</h1>
+    <p>Download the following games to your device</p>
+    
+    <div class="btn-container">
+        <a href="https://installchecker.com/cl/i/r7vkrv" target="_blank" class="btn btn-apk">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d7/Android_robot.svg/32px-Android_robot.svg.png" alt="Android">
+            Download APK
+        </a>
+        <a href="https://example.com/ios-download" target="_blank" class="btn btn-ios">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Apple_logo_black.svg/32px-Apple_logo_black.svg.png" alt="iOS">
+            Download iOS
+        </a>
+        <a href="https://youtu.be/j4MDwOEm2GU?si=MDiy6mxKcStHlIq-" target="_blank" class="btn btn-install">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/42/YouTube_icon_%282013-2017%29.png/32px-YouTube_icon_%282013-2017%29.png" alt="YouTube">
+            How to Install
+        </a>
+    </div>
+
+    <!-- الصور المستطيلة -->
+    <div class="image-gallery">
+        <a href="#modal1"><img src="https://i.ibb.co/ZzNCfJ4/The-Spike-MOD-APK-Boom-Jump-1024x576.webp" alt="Game Screenshot 1"></a>
+        <a href="#modal2"><img src="https://i.ibb.co/C9ktZX7/6562-1.png" alt="Game Screenshot 2"></a>
+    </div>
+
+    <!-- نافذة منبثقة -->
+    <div id="modal1" class="modal">
+        <a href="#" class="close">&times;</a>
+        <img src="https://i.ibb.co/ZzNCfJ4/The-Spike-MOD-APK-Boom-Jump-1024x576.webp" alt="Game Screenshot 1">
+    </div>
+    <div id="modal2" class="modal">
+        <a href="#" class="close">&times;</a>
+        <img src="https://i.ibb.co/C9ktZX7/6562-1.png" alt="Game Screenshot 2">
+    </div>
+
+    <!-- قسم About This Game -->
+    <div class="article-container">
+        <h2>About This Game</h2>
+        <p>
+     There are many games that serve as real-world sports simulations, such as racing, cricket, football, and ludo. However, for volleyball gamers, there wasn’t a good game available. That’s why the Spike Mod APK was created for volleyball fans. In its original version, you’ll encounter several limitations from the developer, which prevent you from using all features for free.
+        </p>
+        <p>
+         But there’s no need to worry because, for Spike fans, on this dedicated site, I am providing the Spike Mod APK unlock all characters max level. You can download it now and enjoy it as a Spike fan. In this mod version, everything is unlocked, increasing your excitement to play like a pro player even enjoy it with your friends.
+        </p>
+    </div>
+</body>
+</html>
